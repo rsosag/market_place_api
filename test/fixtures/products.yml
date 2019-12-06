@@ -10,4 +10,4 @@ two:
   title: Product 2
   price: 9.99
   published: false
-  user: one
+  user: two
