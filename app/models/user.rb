@@ -11,4 +11,6 @@ class User < ApplicationRecord
   # be automatically hashed and saved in the `User#password_digest` attribute.
   has_secure_password
 
+  has_many :products, dependent: :destroy
+
 end
