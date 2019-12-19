@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
-  validates :email, uniqueness: true
-  validates_format_of :email, with: /\A[^@\s]+@[^@\s]+\z/
-  validates :password_digest, presence: true
+  has_many :products, dependent: :destroy
+  has_many :orders, dependent: :destroy
 
   # has_secure_password adds the following validations:
   #  the password must be present when creating.
@@ -11,6 +12,8 @@ class User < ApplicationRecord
   # be automatically hashed and saved in the `User#password_digest` attribute.
   has_secure_password
 
-  has_many :products, dependent: :destroy
+  validates :email, uniqueness: true
+  validates_format_of :email, with: /\A[^@\s]+@[^@\s]+\z/
+  validates :password_digest, presence: true
 
 end
