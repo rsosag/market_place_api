@@ -43,6 +43,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'jwt', '~> 2.2'
 
-gem "faker", "~> 2.8"
+gem 'faker', '~> 2.8'
 
-gem "fast_jsonapi", "~> 1.5"
+gem 'fast_jsonapi', '~> 1.5'
+
+# Resolve github vulnerability
+gem 'rack', '>= 2.0.8'
