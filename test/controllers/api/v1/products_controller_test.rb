@@ -16,7 +16,7 @@ class Api::V1::ProductsControllerTest < ActionDispatch::IntegrationTest
     get api_v1_product_url(@product), as: :json
     assert_response :success
     json_response = JSON.parse(response.body)
-    assert_equal @product.title, json_response['title']
+    assert_equal @product.title, json_response['data']['attributes']['title']
   end
 
   test 'should create product' do
