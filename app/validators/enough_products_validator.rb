@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 class EnoughProductsValidator < ActiveModel::Validator
   def validate(record)
     record.placements.each do |placement|
