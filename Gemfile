@@ -51,3 +51,5 @@ gem 'fast_jsonapi', '~> 1.5'
 gem 'rack', '>= 2.0.8'
 
 gem 'kaminari', '~> 1.1'
+
+gem 'bullet', '~> 6.0', group: :development
